@@ -95,6 +95,7 @@ public class MathServlet extends HttpServlet {
         if(inputNumberStr == null || name == null) {
             LOGGER.info("Did not get required parameters " + "name is " + name + " and inputNumber is" + inputNumberStr);
             resp.getWriter().write("invalid parameters");
+            return;
         }
         try {
             inputNumber = Integer.valueOf(inputNumberStr);
@@ -116,6 +117,7 @@ public class MathServlet extends HttpServlet {
         if (valueStr == null || name == null) {
             LOGGER.info("Did not get required parameters " + "name is " + name + " and value is" + valueStr);
             resp.getWriter().write("invalid parameters");
+            return;
         }
         try {
             value = Integer.valueOf(valueStr);
